@@ -86,9 +86,13 @@ public class Calculator {
 		
 		int expected = 11;
 		assertEquals(expected,actual);
+		
 	}
 	
 	public int div(int a, int b) {
-		return a/b;
+		if (b == 0) {
+	        throw new IllegalArgumentException("Cannot divide by 0");
+	    }
+	    return a / b;
 	}
 }
